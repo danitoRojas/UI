@@ -2,20 +2,7 @@ const slide3Content = `
 <!-- DIAPOSITIVA 3: 2. COMPOSABLE (HIBRIDO) -->
 <div class="h-full flex flex-col justify-between space-y-4 md:space-y-0 text-slate-800">
     <!-- Header: Nivel 2 & Título -->
-    <div class="hidden lg:flex flex-col md:flex-row md:items-center md:justify-between gap-3 border-b border-blue-100 pb-3">
-        <div class="flex items-center gap-3">
-            <span class="px-3 py-1 bg-blue-600 text-white font-mono font-bold text-xs uppercase tracking-wider rounded-full shadow-sm">
-                Nivel 2
-            </span>
-            <h2 class="font-display text-lg md:text-xl font-black text-blue-900 uppercase tracking-tight">
-                Componentes Base (Composable)
-            </h2>
-        </div>
-        <div class="flex items-center gap-1.5 text-xs font-semibold text-blue-600 bg-blue-50 border border-blue-100 px-3 py-1 rounded-full">
-            <span class="w-1.5 h-1.5 bg-blue-600 rounded-full animate-ping"></span>
-            El Híbrido
-        </div>
-    </div>
+    
 
     <!-- Contenido Principal: Analogía (Casa construida, lista para personalizar) -->
     <div class="grid grid-cols-1 md:grid-cols-12 gap-5 items-center flex-grow py-3 overflow-y-auto md:overflow-hidden">

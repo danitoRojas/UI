@@ -4,13 +4,13 @@ let selectedLibraryName = null;
 
 const slides = [
     {
-        title: "", 
+        title: "",
         subtitle: "",
         indicatorColor: "bg-slate-900"
     },
     {
         title: "El Dilema del Front-end:",
-        subtitle: "Catálogo Visual y Caótico - LEGIE LIBRE UI",
+        subtitle: "",
         indicatorColor: "bg-blue-500"
     },
     {
@@ -29,18 +29,23 @@ const slides = [
         indicatorColor: "bg-orange-500"
     },
     {
-        title: "Nivel 4: Los Estilos (Pura Apariencia)",
+        title: "Nuestras sugerencias",
         subtitle: "Clases semánticas CSS utilitarias con mínima interactividad lógica - DaisyUI & Flowbite",
         indicatorColor: "bg-purple-500"
     },
     {
-        title: "CRITERIOS DE SELECCIÓN",
-        subtitle: "Accesibilidad (a11y), Bundle Size y DX en equilibrio flotante",
+        title: "¿Cuál es nuestro Camino?",
+        subtitle: "",
         indicatorColor: "bg-amber-500"
     },
     {
-        title: "EXPLORACIÓN Y DETALLES",
-        subtitle: "Haz clic en cualquier badge físico de la pantalla para inspeccionar sus características",
+        title: "",
+        subtitle: "",
+        indicatorColor: "bg-amber-300"
+    },
+    {
+        title: "",
+        subtitle: "",
         indicatorColor: "bg-teal-500"
     }
 ];
@@ -166,13 +171,13 @@ const logoDrawers = {
     'shadcn/ui': (ctx, x, y, size) => {
         ctx.fillStyle = '#0f172a';
         ctx.beginPath();
-        ctx.arc(x, y, size/2, 0, Math.PI * 2);
+        ctx.arc(x, y, size / 2, 0, Math.PI * 2);
         ctx.fill();
         ctx.strokeStyle = '#ffffff';
         ctx.lineWidth = size * 0.15;
         ctx.beginPath();
-        ctx.moveTo(x - size*0.23, y + size*0.23);
-        ctx.lineTo(x + size*0.23, y - size*0.23);
+        ctx.moveTo(x - size * 0.23, y + size * 0.23);
+        ctx.lineTo(x + size * 0.23, y - size * 0.23);
         ctx.stroke();
     },
     'Material UI (MUI)': (ctx, x, y, size) => {
@@ -180,8 +185,8 @@ const logoDrawers = {
         ctx.beginPath();
         for (let i = 0; i < 6; i++) {
             const angle = (i * Math.PI) / 3;
-            const px = x + Math.cos(angle) * (size/2);
-            const py = y + Math.sin(angle) * (size/2);
+            const px = x + Math.cos(angle) * (size / 2);
+            const py = y + Math.sin(angle) * (size / 2);
             if (i === 0) ctx.moveTo(px, py);
             else ctx.lineTo(px, py);
         }
@@ -196,29 +201,29 @@ const logoDrawers = {
     'DaisyUI': (ctx, x, y, size) => {
         ctx.fillStyle = '#FFB600';
         ctx.beginPath();
-        ctx.arc(x, y, size/4, 0, Math.PI * 2);
+        ctx.arc(x, y, size / 4, 0, Math.PI * 2);
         ctx.fill();
         ctx.fillStyle = '#ffffff';
         for (let i = 0; i < 8; i++) {
             const angle = (i * Math.PI) / 4;
-            const px = x + Math.cos(angle) * (size/3.4);
-            const py = y + Math.sin(angle) * (size/3.4);
+            const px = x + Math.cos(angle) * (size / 3.4);
+            const py = y + Math.sin(angle) * (size / 3.4);
             ctx.beginPath();
-            ctx.arc(px, py, size/8, 0, Math.PI*2);
+            ctx.arc(px, py, size / 8, 0, Math.PI * 2);
             ctx.fill();
         }
         ctx.fillStyle = '#1e293b';
         ctx.beginPath();
-        ctx.arc(x, y, size/5, 0, Math.PI * 2);
+        ctx.arc(x, y, size / 5, 0, Math.PI * 2);
         ctx.fill();
     },
     'HeroUI': (ctx, x, y, size) => {
-        const grad = ctx.createLinearGradient(x - size/2, y - size/2, x + size/2, y + size/2);
+        const grad = ctx.createLinearGradient(x - size / 2, y - size / 2, x + size / 2, y + size / 2);
         grad.addColorStop(0, '#FF4ECD');
         grad.addColorStop(1, '#0070F3');
         ctx.fillStyle = grad;
         ctx.beginPath();
-        ctx.arc(x, y, size/2, 0, Math.PI * 2);
+        ctx.arc(x, y, size / 2, 0, Math.PI * 2);
         ctx.fill();
         ctx.fillStyle = '#ffffff';
         ctx.font = `900 ${size * 0.45}px "Inter", sans-serif`;
@@ -229,97 +234,97 @@ const logoDrawers = {
     'Mantine': (ctx, x, y, size) => {
         ctx.fillStyle = '#228be6';
         ctx.beginPath();
-        ctx.moveTo(x - size*0.4, y - size*0.4);
-        ctx.lineTo(x + size*0.4, y - size*0.4);
-        ctx.lineTo(x + size*0.4, y);
-        ctx.quadraticCurveTo(x + size*0.4, y + size*0.4, x, y + size*0.5);
-        ctx.quadraticCurveTo(x - size*0.4, y + size*0.4, x - size*0.4, y);
+        ctx.moveTo(x - size * 0.4, y - size * 0.4);
+        ctx.lineTo(x + size * 0.4, y - size * 0.4);
+        ctx.lineTo(x + size * 0.4, y);
+        ctx.quadraticCurveTo(x + size * 0.4, y + size * 0.4, x, y + size * 0.5);
+        ctx.quadraticCurveTo(x - size * 0.4, y + size * 0.4, x - size * 0.4, y);
         ctx.closePath();
         ctx.fill();
         ctx.fillStyle = '#ffffff';
         ctx.font = `italic 900 ${size * 0.45}px "Inter", sans-serif`;
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        ctx.fillText('M', x, y - size*0.05);
+        ctx.fillText('M', x, y - size * 0.05);
     },
     'Ant Design': (ctx, x, y, size) => {
         ctx.fillStyle = '#1677ff';
         ctx.beginPath();
-        ctx.moveTo(x, y - size/2);
-        ctx.lineTo(x + size/2, y);
-        ctx.lineTo(x, y + size/2);
-        ctx.lineTo(x - size/2, y);
+        ctx.moveTo(x, y - size / 2);
+        ctx.lineTo(x + size / 2, y);
+        ctx.lineTo(x, y + size / 2);
+        ctx.lineTo(x - size / 2, y);
         ctx.closePath();
         ctx.fill();
         ctx.fillStyle = '#ffffff';
         ctx.beginPath();
-        ctx.arc(x, y, size/4, 0, Math.PI * 2);
+        ctx.arc(x, y, size / 4, 0, Math.PI * 2);
         ctx.fill();
         ctx.fillStyle = '#1677ff';
         ctx.beginPath();
-        ctx.arc(x, y, size/6, 0, Math.PI * 2);
+        ctx.arc(x, y, size / 6, 0, Math.PI * 2);
         ctx.fill();
     },
     'Radix UI': (ctx, x, y, size) => {
         ctx.fillStyle = '#6e56cf';
         ctx.beginPath();
-        ctx.arc(x, y, size/2, 0, Math.PI * 2);
+        ctx.arc(x, y, size / 2, 0, Math.PI * 2);
         ctx.fill();
         ctx.fillStyle = '#ffffff';
         ctx.beginPath();
-        ctx.arc(x - size*0.16, y, size*0.12, 0, Math.PI*2);
+        ctx.arc(x - size * 0.16, y, size * 0.12, 0, Math.PI * 2);
         ctx.fill();
-        ctx.fillRect(x + size*0.04, y - size*0.16, size*0.18, size*0.18);
+        ctx.fillRect(x + size * 0.04, y - size * 0.16, size * 0.18, size * 0.18);
         ctx.beginPath();
-        ctx.arc(x + size*0.13, y + size*0.13, size*0.12, 0, Math.PI/2);
-        ctx.lineTo(x + size*0.13, y + size*0.13);
+        ctx.arc(x + size * 0.13, y + size * 0.13, size * 0.12, 0, Math.PI / 2);
+        ctx.lineTo(x + size * 0.13, y + size * 0.13);
         ctx.closePath();
         ctx.fill();
     },
     'Tailwind UI': (ctx, x, y, size) => {
         ctx.fillStyle = '#38bdf8';
         ctx.beginPath();
-        ctx.arc(x, y, size/2, 0, Math.PI * 2);
+        ctx.arc(x, y, size / 2, 0, Math.PI * 2);
         ctx.fill();
         ctx.strokeStyle = '#ffffff';
         ctx.lineWidth = size * 0.1;
         ctx.lineCap = 'round';
         ctx.beginPath();
-        ctx.moveTo(x - size*0.28, y - size*0.1);
-        ctx.quadraticCurveTo(x - size*0.1, y - size*0.28, x, y - size*0.1);
-        ctx.quadraticCurveTo(x + size*0.1, y + size*0.08, x + size*0.28, y - size*0.1);
+        ctx.moveTo(x - size * 0.28, y - size * 0.1);
+        ctx.quadraticCurveTo(x - size * 0.1, y - size * 0.28, x, y - size * 0.1);
+        ctx.quadraticCurveTo(x + size * 0.1, y + size * 0.08, x + size * 0.28, y - size * 0.1);
         ctx.stroke();
         ctx.beginPath();
-        ctx.moveTo(x - size*0.28, y + size*0.1);
-        ctx.quadraticCurveTo(x - size*0.1, y - size*0.08, x, y + size*0.1);
-        ctx.quadraticCurveTo(x + size*0.1, y + size*0.28, x + size*0.28, y + size*0.1);
+        ctx.moveTo(x - size * 0.28, y + size * 0.1);
+        ctx.quadraticCurveTo(x - size * 0.1, y - size * 0.08, x, y + size * 0.1);
+        ctx.quadraticCurveTo(x + size * 0.1, y + size * 0.28, x + size * 0.28, y + size * 0.1);
         ctx.stroke();
     },
     'Flowbite': (ctx, x, y, size) => {
         ctx.fillStyle = '#1A56DB';
         ctx.beginPath();
-        ctx.arc(x, y, size/2, 0, Math.PI*2);
+        ctx.arc(x, y, size / 2, 0, Math.PI * 2);
         ctx.fill();
         ctx.fillStyle = '#ffffff';
         ctx.font = `italic 900 ${size * 0.55}px "Inter", sans-serif`;
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        ctx.fillText('F', x - size*0.05, y);
+        ctx.fillText('F', x - size * 0.05, y);
     },
     'Ark / Park UI': (ctx, x, y, size) => {
         ctx.fillStyle = '#10b981';
         ctx.beginPath();
-        ctx.arc(x, y, size/2, 0, Math.PI*2);
+        ctx.arc(x, y, size / 2, 0, Math.PI * 2);
         ctx.fill();
         ctx.fillStyle = '#090d16';
         ctx.beginPath();
-        ctx.moveTo(x, y - size*0.3);
-        ctx.quadraticCurveTo(x + size*0.3, y, x, y + size*0.3);
-        ctx.quadraticCurveTo(x - size*0.3, y, x, y - size*0.3);
+        ctx.moveTo(x, y - size * 0.3);
+        ctx.quadraticCurveTo(x + size * 0.3, y, x, y + size * 0.3);
+        ctx.quadraticCurveTo(x - size * 0.3, y, x, y - size * 0.3);
         ctx.fill();
         ctx.fillStyle = '#ffffff';
         ctx.beginPath();
-        ctx.arc(x, y, size*0.08, 0, Math.PI*2);
+        ctx.arc(x, y, size * 0.08, 0, Math.PI * 2);
         ctx.fill();
     }
 };

@@ -2,20 +2,7 @@ const slide4Content = `
 <!-- DIAPOSITIVA 4: 3. READY-TO-USE (COMPLETA) -->
 <div class="h-full flex flex-col justify-between space-y-4 md:space-y-0 text-slate-800">
     <!-- Header: Nivel 3 & Título -->
-    <div class="hidden lg:flex flex-col md:flex-row md:items-center md:justify-between gap-3 border-b border-emerald-100 pb-3">
-        <div class="flex items-center gap-3">
-            <span class="px-3 py-1 bg-emerald-650 text-white font-mono font-bold text-xs uppercase tracking-wider rounded-full shadow-sm">
-                Nivel 3
-            </span>
-            <h2 class="font-display text-lg md:text-xl font-black text-emerald-900 uppercase tracking-tight">
-                Sistema de Diseño Completo (Opinionated)
-            </h2>
-        </div>
-        <div class="flex items-center gap-1.5 text-xs font-semibold text-emerald-650 bg-emerald-50 border border-emerald-100 px-3 py-1 rounded-full">
-            <span class="w-1.5 h-1.5 bg-emerald-650 rounded-full animate-ping"></span>
-            Velocidad Extrema
-        </div>
-    </div>
+    
 
     <!-- Contenido Principal: Analogía (La casa completamente terminada y amueblada) -->
     <div class="grid grid-cols-1 md:grid-cols-12 gap-5 items-center flex-grow py-3 overflow-y-auto md:overflow-hidden">

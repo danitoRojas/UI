@@ -9,7 +9,7 @@ const slide0Content = `
             Definiendo nuestro ADN
         </p>
         <p class="text-slate-500 text-xs md:text-sm font-medium tracking-wide max-w-lg mx-auto mt-2 leading-relaxed">
-            Una guía física y caótica para elegir la base técnica de tu interfaz de usuario en el ecosistema actual de 2026.
+            Una guía para elegir la base técnica de la interfaz de usuario en el ecosistema actual de 2026.
         </p>
     </div>
 
@@ -24,15 +24,13 @@ const slide0Content = `
                         <i class="fa-solid fa-code"></i>
                     </div>
                     <div class="text-left">
-                        <h4 class="font-bold text-slate-900 text-sm">Daniel</h4>
-                        <p class="text-slate-500 text-[10px] font-medium font-mono">Frontend Architect</p>
+                        <h4 class="font-bold text-slate-900 text-sm">Daniel Rojas</h4>
                     </div>
                 </div>
                 <!-- Redes Daniel -->
                 <div class="flex gap-3.5 text-slate-400 text-xs pt-2 border-t border-slate-100 w-full justify-start pointer-events-auto">
                     <a href="https://github.com" target="_blank" class="hover:text-blue-600 transition-colors"><i class="fa-brands fa-github"></i></a>
                     <a href="https://linkedin.com" target="_blank" class="hover:text-blue-600 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://x.com" target="_blank" class="hover:text-blue-600 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
                 </div>
             </div>
 
@@ -43,15 +41,13 @@ const slide0Content = `
                         <i class="fa-solid fa-palette"></i>
                     </div>
                     <div class="text-left">
-                        <h4 class="font-bold text-slate-900 text-sm">Paola</h4>
-                        <p class="text-slate-500 text-[10px] font-medium font-mono">UI/UX Designer</p>
+                        <h4 class="font-bold text-slate-900 text-sm">Paola Apaza</h4>
                     </div>
                 </div>
                 <!-- Redes Paola -->
                 <div class="flex gap-3.5 text-slate-400 text-xs pt-2 border-t border-slate-100 w-full justify-start pointer-events-auto">
-                    <a href="https://behance.net" target="_blank" class="hover:text-pink-500 transition-colors"><i class="fa-brands fa-behance"></i></a>
-                    <a href="https://linkedin.com" target="_blank" class="hover:text-pink-500 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://dribbble.com" target="_blank" class="hover:text-pink-500 transition-colors"><i class="fa-brands fa-dribbble"></i></a>
+                    <a href="https://github.com/PaolaApazaDev" target="_blank" class="hover:text-blue-600 transition-colors"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/paola-alejandra-apaza-quispe-a78ab2348/" target="_blank" class="hover:text-pink-500 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
